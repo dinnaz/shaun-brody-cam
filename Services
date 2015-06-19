@@ -1,0 +1,20 @@
+package hireVehicle;
+public class Services {
+    
+    private String service;
+    
+public Services()
+    {
+        service = "No services have been recorded yet.";
+    }
+public Services(String ser)
+{
+    service = ser;
+}
+public void printServices()
+    {
+        System.out.println("Total Services: " + service);
+    }        
+        
+        
+}
