@@ -1,0 +1,28 @@
+run:
+Enter Name of Manufacturer
+Ford
+Enter Model
+Falcon
+Enter Year
+2008
+Please Enter journey length in kilometers
+1000
+Please Enter liters of  fuel used
+100
+Hello, Type (1) PerKmRental or Type(2) for PerDayRental
+1
+Thank You for choosing PerKmRental, Please Enter kilometers travelled!
+256
+============================================================================
+The Total cost for today will be:1890.0
+============================================================================
+============================================================================
+Recorded Vehicle: Ford, Falcon, 2008.
+Recorded Kilometers Travelled:1000.
+Total Fuel Cost: 20.0.
+Number Of Services Required: 10.0.
+Thank You for dealing with the Amazing Programmers, Good Day Fellow Chap
+============================================================================
+BUILD SUCCESSFUL (total time: 41 seconds)
+
+Should end up something like this
