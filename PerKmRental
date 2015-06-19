@@ -1,0 +1,32 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package hireVehicle;
+
+/**
+ *
+ * @author GearsOfWraith696
+ */
+public class PerKmRental {
+       private String perkmrental;
+    
+public PerKmRental()
+{
+    perkmrental = "No kilometers travelled yet.";
+}
+public PerKmRental(String rental)
+{
+    perkmrental = rental;
+}
+public void printPerKmRental()
+{
+    System.out.println("Total Price cost: " + perkmrental); 
+}
+
+}
+
+    
+    
+
