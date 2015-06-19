@@ -1,0 +1,19 @@
+package hireVehicle;
+public class FuelPrice {
+    
+    private String fuelPrice;
+    
+public FuelPrice()
+{
+    fuelPrice = "No fuel has been purchased yet.";
+}
+public FuelPrice(String price)
+{
+    fuelPrice = price;
+}
+public void printFuelPrice()
+{
+    System.out.println("Total fuel cost: " + fuelPrice); 
+}
+
+}
