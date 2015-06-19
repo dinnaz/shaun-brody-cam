@@ -1,0 +1,136 @@
+package hireVehicle;
+
+import java.util.Scanner;
+
+public class Vehicle {
+    
+    private String manufacturer;
+    private String model;
+    private String makeYear;
+    private int journey;
+    private double fuelPrice;
+    private double service;
+    private double perkmrental;
+    private double perdayrental;
+        
+public Vehicle()
+    {
+    manufacturer = "Unknown manufacturer";
+    model = "Unknown model";
+    makeYear = "Unknown year";
+        vehicle ();
+    }
+
+public void vehicle ()
+{
+    Scanner in = new Scanner(System.in);
+        System.out.println("Enter Name of Manufacturer");
+            manufacturer = in.nextLine();
+        System.out.println("Enter Model");
+                model = in.nextLine();
+        System.out.println("Enter Year");
+                makeYear = in.nextLine();
+                
+                Journey();
+                FuelPrice();
+                Services();
+                Choice();
+                print();
+}
+public void Journey()
+    {
+        Scanner in = new Scanner(System.in);
+            System.out.println("Please Enter journey length in kilometers");
+            String line = in.nextLine();
+            journey = Integer.parseInt(line);
+                
+    }
+
+public void FuelPrice()
+{
+    Scanner in = new Scanner(System.in);
+                System.out.println("Please Enter liters of  fuel used");
+                String line = in.nextLine();
+           int fuel = Integer.parseInt(line);
+           
+           fuelPrice = (journey / fuel) * 2;
+           
+}
+public void Choice()
+{
+  Scanner choice = new Scanner(System.in);
+  System.out.println("Hello, Type (1) PerKmRental or Type(2) for PerDayRental");
+  int choices = Integer.parseInt(choice.nextLine());
+  
+  if (choices == 1)
+  {
+      PerKmRental();
+  }
+  
+  else if (choices == 2)
+  {
+      PerDayRental();
+  }
+  else 
+  {
+      System.out.println("Sorry that input does not exist");
+  
+  }
+  
+    
+}
+
+public void PerKmRental()
+{
+    Scanner kmrental = new Scanner(System.in);
+    System.out.println("Thank You for choosing PerKmRental, Please Enter kilometers travelled!");
+    String line = kmrental.nextLine();
+    double totalprice = Double.parseDouble(line);
+    perkmrental = journey * 1.89;
+    System.out.println("============================================================================");
+    System.out.println("The Total cost for today will be:" + perkmrental);
+    System.out.println("============================================================================");
+    
+    
+    
+    
+    
+}
+
+public void PerDayRental()
+{  
+Scanner dayrental = new Scanner(System.in);
+System.out.println("Thank You for choosig PerDayRental, Please enter the kilometers travelled!");
+String line = dayrental.nextLine();
+perdayrental = journey * 1.89 + (100);
+System.out.println("============================================================================");
+System.out.println("The Total cost for taday will be:" + perdayrental);
+System.out.println("============================================================================");
+
+
+}
+public void Services()
+{
+    double numser = journey / 100;
+    service = Math.floor(numser);
+}
+
+
+    
+
+public void print()
+        
+    {
+        System.out.println("============================================================================");
+        System.out.println("Recorded Vehicle: " + manufacturer + ", " + model + ", " + makeYear + ".");
+        System.out.println("Recorded Kilometers Travelled:" + journey + ".");
+        System.out.println("Total Fuel Cost: " + fuelPrice + ".");
+        System.out.println("Number Of Services Required: " + service + ".");
+        
+        System.out.println("Thank You for dealing with the Amazing Programmers, Good Day Fellow Chap");
+        System.out.println("============================================================================");
+        
+    }
+}
+
+
